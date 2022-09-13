@@ -7,9 +7,8 @@ class PacienteTest < ActiveSupport::TestCase
     assert_not paciente.save
   end
 
-  test 'Criando paciente com e-mail inválido' do
-    paciente = Paciente.new nome: 'Ana Paula Macena', data_nascimento: '1996-01-11',
-                            cpf: '111.222.333-44', email: 'ana@ana.com'
-    assert_not paciente.save
+  test "Criando paciente válido" do
+    paciente = Paciente.new nome: "Ana Paula", data_nascimento: "1996-01-11", cpf: "052.714.070-80", email: "anaps@gmail.com"
+    assert paciente.save
   end
 end
