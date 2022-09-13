@@ -22,11 +22,11 @@ Then('eu vejo uma mensagem que o medico foi apagado com sucesso') do
 end
 
 When('eu preencho os campos de nome {string}, cpf {string}, email {string}, especialidade {string} e crm {string}') do |string, string2, string3, string4, string5|
-  fill_in 'medico[nome]', :with => string
-  fill_in 'medico[cpf]', :with => string2
-  fill_in 'medico[email]', :with => string3
-  fill_in 'medico[especialidade]', :with => string4
-  fill_in 'medico[crm]', :with => string5
+  fill_in 'medico[nome]', :with => nome
+  fill_in 'medico[cpf]', :with => cpf
+  fill_in 'medico[email]', :with => email
+  fill_in 'medico[especialidade]', :with => especialidade
+  fill_in 'medico[crm]', :with => crm
 end
 
 When('eu clico em cadastrar novo medico') do
